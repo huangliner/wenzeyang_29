@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//every方法
+			var lm=[2,4,{x:2,y:3},true,[5,6]];
+			var mm=lm.every(value=>{
+				return typeof(value)=="number";
+			});
+			document.write(mm+'<br>');
+			
+			//检测数组var num=[1,6,3,9]中元素的值是否在2-10之间（若num中有非数字返回false）
+			var num=[1,6,3,9];
+			var nn={
+				dp:function (value) {
+					return typeof(value)=="number";
+				},
+				dg:function  (value) {
+					return value>2&&value<10;
+				}
+			}
+			document.write(num.every(nn.dp) ? (num.every(nn.dg) ? '都在2~10之间':'不全在2~10之间'+'<br>'):'不全是数字'+'<br>');
+			
+			//some方法
+			var cc=arr.some(value=>{
+				return typeof(value)!="number";
+			})
+			document.write(cc);
+		</script>
+	</body>
+</html>
